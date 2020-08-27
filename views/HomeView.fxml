@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.validation.DoubleValidator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <StackPane layoutX="184.0" layoutY="100.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2196f3;" />
+                  <Pane prefHeight="351.0" prefWidth="800.0" style="-fx-background-color: #EDE7F6;" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="486.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="90.0" prefHeight="430.0" prefWidth="718.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+                     <children>
+                        <ImageView fx:id="iconView" fitHeight="140.0" fitWidth="142.0" layoutX="586.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image fx:id="userIcon" url="@../resources/view_resources/User.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="logoutBtn" layoutX="525.0" layoutY="350.0" onAction="#onLogoutClick" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="638.0" layoutY="350.0" onAction="#onExitClick" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Exit" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <DoubleValidator />
+                        <JFXListView fx:id="activeUsersList" layoutX="14.0" layoutY="54.0" onMouseClicked="#userChoose" prefHeight="360.0" prefWidth="200.0" showTooltip="true" />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="200.0" text="Active users:" textFill="#2196f3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.71" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <VBox layoutX="188.0" layoutY="24.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="425.0" text="CRYPTOGRAM" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="titleLabel" alignment="CENTER" prefHeight="32.0" prefWidth="425.0" text="Welcome User" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
