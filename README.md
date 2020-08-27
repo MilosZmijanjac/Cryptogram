@@ -21,7 +21,7 @@ Sending a message is intuitive.
 Message first gets encrypted with a symmetric algorithm, than hashed and lastly digitaly signed with private key.
 When reading the message on the other end the procces is backward.
 
-![Screenshot](Screenshots/MessRecieved.png)
+![Screenshot](Screenshots/MessReceived.png)
 
 Ending a session.
 
